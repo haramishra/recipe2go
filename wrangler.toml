@@ -8,5 +8,6 @@ mode = "smart"
 
 [[d1_databases]]
 binding = "DATABASE"
-database_name = "cloudflare-saas-stack-db"
-database_id = "294b2613-5f3c-40e5-b32b-bbe664bd9696"
+database_name = "recipe2go-db"
+database_id = "864af66c-ed4d-4d30-94e5-7bac840cb956"
+migrations_dir = "./drizzle"
