@@ -11,8 +11,7 @@ import { users } from "./user";
 // Subscription Plans
 export const subscription_plans = sqliteTable("subscription_plan", {
   id: text("id")
-    .primaryKey()
-    .$defaultFn(() => crypto.randomUUID()),
+    .primaryKey(),
   name: text("name").notNull(), // 'Starter', 'Chef's Choice', 'Gourmet', 'Business'
   price: real("price").notNull(), // e.g., 0, 9.99, 19.99, 99.99
   billing_period: integer("billing_period").notNull(), // in days, e.g., 30, 365
