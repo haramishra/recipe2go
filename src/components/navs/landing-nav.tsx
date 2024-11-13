@@ -1,5 +1,10 @@
+// import ThemeToggle from "@/lib/theme/theme-button";
+import Link from "next/link";
+import { auth } from "@/server/auth";
 import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
 
+import { getThemeToggler } from "@/lib/theme/get-theme-button";
+import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import {
@@ -9,11 +14,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
-// import ThemeToggle from "@/lib/theme/theme-button";
-import Link from "next/link";
-import { getThemeToggler } from "@/lib/theme/get-theme-button";
-import { auth } from "@/server/auth";
 
 const NavLinks = [
   { href: "#", label: "Home" },
@@ -62,7 +62,7 @@ const LandingPageNavbar = async () => {
 
             {session ? (
               <Link
-                href="/login"
+                href="/dashboard"
                 className={cn(buttonVariants({ variant: "default" }), "ml-4")}
               >
                 Got to dashboard
@@ -70,7 +70,7 @@ const LandingPageNavbar = async () => {
             ) : (
               <>
                 <Link
-                  href="/signup"
+                  href="/sign-up"
                   className={cn(buttonVariants({ variant: "default" }))}
                 >
                   Sign up

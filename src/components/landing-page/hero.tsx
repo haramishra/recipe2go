@@ -1,7 +1,9 @@
-import { cn } from "@/lib/utils";
 import Link from "next/link";
-import { Button, buttonVariants } from "../ui/button";
 import { signIn } from "@/server/auth";
+
+import { cn } from "@/lib/utils";
+
+import { Button, buttonVariants } from "../ui/button";
 
 export default function Hero() {
   return (
@@ -22,7 +24,10 @@ export default function Hero() {
             <form
               action={async () => {
                 "use server";
-                await signIn("google");
+                await signIn("google", {
+                  redirect: true,
+                  redirectTo: "/dashboard",
+                });
               }}
             >
               <Button className="mt-4" size="lg">

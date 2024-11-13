@@ -24,6 +24,7 @@ import {
   Loader2,
   LucideIcon,
   LucideProps,
+  Mail,
   MailWarning,
   Megaphone,
   Menu,
@@ -42,9 +43,8 @@ import {
   UsersRound,
   X,
 } from "lucide-react";
+
 import { BrandIcons } from "./brand-icons";
-
-
 
 export type Icon = LucideIcon;
 
@@ -57,6 +57,7 @@ export const Icons = {
   menuVertical: EllipsisVertical,
   trash: Trash,
   post: FileText,
+  mail: Mail,
   page: File,
   media: Image,
   settings: Settings,
@@ -90,5 +91,5 @@ export const Icons = {
   check: Check,
   brand: {
     ...BrandIcons,
-  }
+  },
 };
